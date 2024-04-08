@@ -1,20 +1,26 @@
 PODS:
-  - TheRouter (1.1.5)
+  - LookinServer (1.2.8):
+    - LookinServer/Core (= 1.2.8)
+  - LookinServer/Core (1.2.8)
+  - TheRouter (1.1.6)
   - Toast (4.0.0)
 
 DEPENDENCIES:
-  - TheRouter (= 1.1.5)
+  - LookinServer
+  - TheRouter
   - Toast (= 4.0.0)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - LookinServer
     - TheRouter
     - Toast
 
 SPEC CHECKSUMS:
-  TheRouter: 00d0b05bd06b5cf6e7df1ef00f0ebc92ee9c954a
+  LookinServer: 1b2b61c6402ae29fa22182d48f5cd067b4e99e80
+  TheRouter: d1cc30710b5b50ac1021f007bf873cc91bfdd619
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
 
-PODFILE CHECKSUM: 5f94f01c46f6a0697f0571b2d52c4474f6af608b
+PODFILE CHECKSUM: a4bdf5de159f3b7e5b25fabcf26492d306735998
 
-COCOAPODS: 1.13.0
+COCOAPODS: 1.14.3

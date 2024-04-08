@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "TheRouterableProxy.h"
 
 FOUNDATION_EXPORT double TheRouterVersionNumber;
 FOUNDATION_EXPORT const unsigned char TheRouterVersionString[];

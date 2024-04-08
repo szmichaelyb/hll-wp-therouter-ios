@@ -10,25 +10,67 @@
 
 @interface ViewController ()
 - (IBAction)push:(id)sender;
-
+- (IBAction)pushWeb:(id)sender;
+- (IBAction)pushA:(id)sender;
+- (IBAction)pushB:(id)sender;
+- (IBAction)pushC:(id)sender;
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
-    // Do any additional setup after loading the view.
+    [self.view setBackgroundColor:UIColor.randomColor];
 }
 
 
-- (IBAction)push:(id)sender {
+- (IBAction)push:(id)sender
+{
     
-    [TheRouterService openURL:TheRouterApi.patternString :[[[TheRouterApi alloc] init] generateParams] :^(NSDictionary * _Nullable params, NSObject * _Nullable classInstance) {
-        
+    [TheRouterService openURL:TheRouterApi.patternString :TheRouterApi.new.generateParams :^(NSDictionary *params, NSObject *classInstance) {
+        NSLog(@"---[%@]---> params = %@,\n---> classInstance = %@",NSStringFromSelector(_cmd),params,classInstance);
     }];
     // 下方为H5跳转Demo
     //    [TheRouterService openWebURL:@"https://therouter.cn/" :@{}];
+}
+
+- (IBAction)pushWeb:(id)sender
+{
+    
+    /// [TheRouterService openURL:TheRouterApi.patternString :TheRouterApi.new.generateParams :^(NSDictionary *params, NSObject *classInstance) {
+    /// }];
+    
+    /// 下方为H5跳转Demo
+    [TheRouterService openWebURL:@"https://therouter.cn/" :@{}];
+}
+
+- (IBAction)pushA:(id)sender
+{
+    NSMutableDictionary *data = TheRouterApi.new.generateParams.mutableCopy;
+    [data addEntriesFromDictionary:@{
+        @"dfzq":@"michael",
+        @"hideTopBar":@(1),
+        @"addRefresh":@(YES),
+    }];
+    NSLog(@"---> 传递参数 = %@", data);
+    [TheRouterService openURL:TheRouterAApi.patternString :data :^(NSDictionary *params, NSObject *classInstance) {
+        NSLog(@"---[%@]---> params = %@,\n---> classInstance = %@",NSStringFromSelector(_cmd),params,classInstance);
+    }];
+}
+
+- (IBAction)pushB:(id)sender
+{
+    [TheRouterService openURL:TheRouterBApi.patternString :TheRouterApi.new.generateParams :^(NSDictionary *params, NSObject *classInstance) {
+        NSLog(@"---[%@]---> params = %@,\n---> classInstance = %@",NSStringFromSelector(_cmd),params,classInstance);
+    }];
+}
+
+- (IBAction)pushC:(id)sender
+{
+    [TheRouterService openURL:TheRouterCApi.patternString :TheRouterApi.new.generateParams :^(NSDictionary *params, NSObject *classInstance) {
+        NSLog(@"---[%@]---> params = %@,\n---> classInstance = %@",NSStringFromSelector(_cmd),params,classInstance);
+    }];
 }
 
 @end

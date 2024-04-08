@@ -10,8 +10,9 @@ install! 'cocoapods',
 
 target 'TheRouter-ObjectiveCDemo' do
   # Comment the next line if you don't want to use dynamic frameworks
-  pod 'TheRouter', '1.1.5'
+  pod 'TheRouter'
   pod 'Toast', '4.0.0'
+  pod 'LookinServer', :configurations => ['Debug']
 end
 
 post_install do |installer|

@@ -1,13 +1,11 @@
 ![](https://therouter.cn/assets/img/logo/logo4.png)
 
-# TheRouter
-
 [![**license**](https://img.shields.io/hexpm/l/plug.svg)](https://www.apache.org/licenses/LICENSE-2.0)
 [![**Platform**](https://img.shields.io/badge/platform-iOS-blue.svg)]()
 [![**Language**](https://img.shields.io/badge/language-Swift-orange.svg)]()
 [![**wiki**](https://img.shields.io/badge/Wiki-open-brightgreen.svg)](https://juejin.cn/user/1768489241815070)
 
-> [英文文档](README_CN.md)
+iOS | [Android](https://github.com/HuolalaTech/hll-wp-therouter-android) | [中文官网](https://therouter.cn) | [英文官网](https://en.therouter.cn)
 
 ## 背景
   1. 随着社区对支持Swift的需求日益增多，Swift5.0二进制库也具有更好的稳定性和兼容性表现，货拉拉技术团队根据社区反馈及内部讨论，决定开源内部业务使用的Swift版本路由组件，与2023年8月份已发布的Objective-C版本路由组件组成一个完整解决方案。
@@ -103,7 +101,7 @@
 Add the following entry in your Podfile:
 
 ```ruby
-   pod 'TheRouter', '1.1.4'
+   pod 'TheRouter', '1.1.5'
 ```
 
 ## Swift限制版本
@@ -147,6 +145,16 @@ TheRouter.lazyRegisterRouterHandle { url, userInfo in
 // 动态注册服务
 TheRouterManager.registerServices(excludeCocoapods: false)
 ```
+
+**注意事项**
+为什么会有TheRouterApi这个类，在跨模块调用时，我们无法拿到其他模块具体的类信息，那么抽象的TheRouterApi就能实现跨模块调用了。 Debug下强制校验是为了保证线上没有问题，上线前最后一层保证。
+TheRouterApi 不是注册时使用的，是跨模块调用时使用的，比如 `TheRouter.openURL(TheRouterLAApi().requiredURL)` 路由注册自动注册的，只需要实现TheRouterAble协议即可。
+forceCheckEnable 强制打开TheRouterApi定义的便捷类与实现TheRouterAble协议类是否相同，打开的话，debug环境会自动检测，避免线上出问题，建议打开.这里都有开关，如果你觉得没必要，改为false即可，但是风险的话需要自己评估，跨模块这块你不知道别人会改类名啥的，这个风险是要考虑的。
+
+**注意事项**
+为什么会有TheRouterApi这个类，在跨模块调用时，我们无法拿到其他模块具体的类信息，那么抽象的TheRouterApi就能实现跨模块调用了。 Debug下强制校验是为了保证线上没有问题，上线前最后一层保证。
+TheRouterApi 不是注册时使用的，是跨模块调用时使用的，比如 `TheRouter.openURL(TheRouterLAApi().requiredURL)` 路由注册自动注册的，只需要实现TheRouterAble协议即可。
+forceCheckEnable 强制打开TheRouterApi定义的便捷类与实现TheRouterAble协议类是否相同，打开的话，debug环境会自动检测，避免线上出问题，建议打开.这里都有开关，如果你觉得没必要，改为false即可，但是风险的话需要自己评估，跨模块这块你不知道别人会改类名啥的，这个风险是要考虑的。
 
 ### 路由注册
 
@@ -336,14 +344,14 @@ TheRouter.removeRouter(TheRouterViewCApi.patternString)
 
 ### 如何让 OC 类也享受到 Swift 路由
 
-这是一个 OC 类的界面，实现路由的跳转需要继承 OC 类，并实现 TheRouterAble 协议即可
+这是一个 OC 类的界面，实现路由的跳转需要实现 TheRouterableProxy 协议即可
 
 ```Swift
 @interface TheRouterBController : UIViewController
 @property (nonatomic, strong) UILabel *desLabel;
 @end
 
-@interface TheRouterBController ()
+@interface TheRouterBController ()<TheRouterableProxy>
 
 @end
 
@@ -355,25 +363,22 @@ TheRouter.removeRouter(TheRouterViewCApi.patternString)
     [self.view addSubview:self.desLabel];
     // Do any additional setup after loading the view.
 }
-@end
 
-public class TheRouterControllerB: TheRouterBController, TheRouterable {
-
-    public static var patternString: [String] {
-        ["scheme://router/demo2",
-         "scheme://router/demo2-Android"]
-    }
-    
-    public static var descriptions: String {
-        "TheRouterControllerDemo"
-    }
-
-    public static func registerAction(info: [String : Any]) -> Any {
-        let vc =  TheRouterBController()
-        vc.desLabel.text = info.description
-        return vc
-    }
+// 实现协议中的类方法
++ (NSArray<NSString *> *)patternString {
+    return @[@"scheme://router/demo2"];
 }
+
++ (NSUInteger)priority {
+    return TheRouterPriorityDefault;
+}
+
++ (id)registerActionWithInfo:(NSDictionary<NSString *, id> *)info {
+    TheRouterBController *vc = [[TheRouterBController alloc] init];
+    vc.desLabel.text = info.description;
+    return vc;
+}
+@end
 ```
 
 ### 路由根据版本号缓存能力

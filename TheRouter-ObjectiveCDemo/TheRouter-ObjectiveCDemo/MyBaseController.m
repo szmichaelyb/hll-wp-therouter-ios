@@ -6,6 +6,7 @@
 //
 
 #import "MyBaseController.h"
+#import "TheRouter_ObjectiveCDemo-Swift.h"
 
 @interface MyBaseController ()
 
@@ -13,19 +14,31 @@
 
 @implementation MyBaseController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self.view setBackgroundColor:UIColor.randomColor];
+    NSLog(@"---> params = %@", self.params);
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark - ------------TheRouterableProxy------------
+/// 实现协议中的类方法
++ (NSArray<NSString *>*)patternString
+{
+    return @[@"dfyy://router/demoBase"];
 }
-*/
+
++ (NSUInteger)priority
+{
+    return TheRouterPriorityDefault;
+}
+
++ (id)registerActionWithInfo:(NSDictionary<NSString *,id>*)info
+{
+    NSLog(@"----> info = %@", info);
+    MyBaseController *vc = self.class.new;
+    vc.params = info;
+    return vc;
+}
 
 @end
