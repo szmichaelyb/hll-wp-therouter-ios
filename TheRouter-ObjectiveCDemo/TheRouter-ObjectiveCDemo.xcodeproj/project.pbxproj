@@ -23,6 +23,7 @@
 		4C3028E52BC410A30033F015 /* MyBController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3028E42BC410A30033F015 /* MyBController.m */; };
 		4C3028E82BC410B10033F015 /* MyCController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3028E72BC410B10033F015 /* MyCController.m */; };
 		4C3028F82BC4287D0033F015 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3028F72BC4287D0033F015 /* UIColor+Ext.swift */; };
+		4C63AA182BC4E04700BA93E6 /* DFRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C63AA172BC4E04700BA93E6 /* DFRouter.swift */; };
 		52E832DCA5D5918F8763E00F /* Pods_TheRouter_ObjectiveCDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC2A2D355E113855780F4BF /* Pods_TheRouter_ObjectiveCDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,7 @@
 		4C3028E62BC410B10033F015 /* MyCController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCController.h; sourceTree = "<group>"; };
 		4C3028E72BC410B10033F015 /* MyCController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyCController.m; sourceTree = "<group>"; };
 		4C3028F72BC4287D0033F015 /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
+		4C63AA172BC4E04700BA93E6 /* DFRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DFRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 				1CCB4D5F2B61FBD800023C42 /* ViewController.h */,
 				1CCB4D602B61FBD800023C42 /* ViewController.m */,
 				4C3028F72BC4287D0033F015 /* UIColor+Ext.swift */,
+				4C63AA172BC4E04700BA93E6 /* DFRouter.swift */,
 			);
 			path = "TheRouter-ObjectiveCDemo";
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 			files = (
 				1CCB4D612B61FBD800023C42 /* ViewController.m in Sources */,
 				1CCB4D5B2B61FBD800023C42 /* AppDelegate.m in Sources */,
+				4C63AA182BC4E04700BA93E6 /* DFRouter.swift in Sources */,
 				1CCB4D6C2B61FBDA00023C42 /* main.m in Sources */,
 				1CB84C392B6205C1003E1E1D /* TheRouterWebController.swift in Sources */,
 				4C3028E52BC410A30033F015 /* MyBController.m in Sources */,

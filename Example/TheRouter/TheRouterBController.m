@@ -33,15 +33,18 @@
 }
 
 // 实现协议中的类方法
-+ (NSArray<NSString *> *)patternString {
++ (NSArray<NSString*>*)patternString
+{
     return @[@"scheme://router/demo2"];
 }
 
-+ (NSUInteger)priority {
++ (NSUInteger)priority
+{
     return TheRouterPriorityDefault;
 }
 
-+ (id)registerActionWithInfo:(NSDictionary<NSString *, id> *)info {
++ (id)registerActionWithInfo:(NSDictionary<NSString *,id>*)info
+{
     TheRouterBController *vc = [[TheRouterBController alloc] init];
     vc.desLabel.text = info.description;
     return vc;

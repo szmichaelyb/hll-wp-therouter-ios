@@ -6,7 +6,7 @@
 //
 
 #import "MyBaseController.h"
-#import "TheRouter_ObjectiveCDemo-Swift.h"
+#import "TheRouter_Example-Swift.h"
 
 @interface MyBaseController ()
 
@@ -18,6 +18,7 @@
 {
     [super viewDidLoad];
     [self.view setBackgroundColor:UIColor.randomColor];
+    self.title = self.params[@"requestURLKey"];
     NSLog(@"---> params = %@", self.params);
 }
 

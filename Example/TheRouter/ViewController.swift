@@ -37,7 +37,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                                          "路由解决本地path编写错误",
                                          "路由适配不同的AndroidPath",
                                          "路由调用本地服务",
-                                         "路由远端调用本地服务：服务接口下发，MQTT,JSBridge"]]
+                                         "路由远端调用本地服务：服务接口下发，MQTT,JSBridge"],
+                                        ["pushA","pushB","pushC"]]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,6 +84,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             view.text = "  路由跳转介绍"
         case 2:
             view.text = "  路由动态能力介绍"
+        case 3:
+            view.text = "  直接路由打开OC页面"
         default:
             break
         }
@@ -97,10 +100,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         switch indexPath.section {
         case 0:
             self.registerRouter(indexPath: indexPath)
+            break
         case 1:
             self.openRouter(indexPath: indexPath)
+            break
         case 2:
             self.dynamicRouter(indexPath: indexPath)
+            break
+        case 3:
+            self.openOCPage(indexPath: indexPath)
+            break
         default:
             break
         }
@@ -246,6 +255,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             let dict: [String: Any] = ["ivar1": ["key":"value"], "resultType": 0]
             let url = "scheme://services?protocol=AppConfigServiceProtocol&method=openMiniProgramWithInfo:"
             TheRouter.openURL((url, dict))
+        default:
+            break
+        }
+    }
+    
+    // MARK: - 直接路由打开OC页面
+    func openOCPage(indexPath: IndexPath) {
+        switch indexPath.row {
+        case 0:
+            TheRouter.openURL(("dfyy://router/demoA?id=3", ["value": 3, "name": "AKyS", "dfzq":"michael"]))
+        case 1:
+            TheRouter.openURL(("dfyy://router/demoB?id=3", ["value": 3, "name": "AKyS", "dfzq":"michael"]))
+        case 2:
+            TheRouter.openURL(("dfyy://router/demoC?id=3", ["value": 3, "name": "AKyS", "dfzq":"michael"]))
         default:
             break
         }

@@ -8,6 +8,8 @@
 #import "ViewController.h"
 #import "TheRouter_ObjectiveCDemo-Swift.h"
 
+@import TheRouter;
+
 @interface ViewController ()
 - (IBAction)push:(id)sender;
 - (IBAction)pushWeb:(id)sender;

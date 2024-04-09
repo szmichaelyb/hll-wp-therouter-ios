@@ -443,3 +443,43 @@ public class TheRouterAnyPrifxApi:NSObject, CustomRouterInfo {
     
     public override init() {}
 }
+
+//public class DFRouterBaseApi: NSObject, CustomRouterInfo {
+//    
+//    @objc public static var patternString = "dfyy://router/demoBase"
+//    public static var routerClass = "MyBaseController"
+//    public var params: [String: Any] { return [:] }
+//    public var jumpType: LAJumpType = .push
+//    
+//    public override init() {}
+//}
+
+public class DFRouterAApi: NSObject, CustomRouterInfo {
+    
+    public static var patternString = "dfyy://router/demoA"
+    public static var routerClass = "MyAController"
+    public var params: [String: Any] { return [:] }
+    public var jumpType: LAJumpType = .push
+    
+    public override init() {}
+}
+
+public class DFRouterBApi: NSObject, CustomRouterInfo {
+    
+    public static var patternString = "dfyy://router/demoB"
+    public static var routerClass = "MyBController"
+    public var params: [String: Any] { return [:] }
+    public var jumpType: LAJumpType = .push
+    
+    public override init() {}
+}
+
+public class DFRouterCApi: NSObject, CustomRouterInfo {
+    
+    public static var patternString = "dfyy://router/demoC"
+    public static var routerClass = "MyCController"
+    public var params: [String: Any] { return [:] }
+    public var jumpType: LAJumpType = .push
+    
+    public override init() {}
+}
