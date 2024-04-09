@@ -6,7 +6,7 @@
 //
 
 #import "MyBaseController.h"
-#import "TheRouter_ObjectiveCDemo-Swift.h"
+#import "TheRouter_Example-Swift.h"
 
 @interface MyBaseController ()
 
@@ -26,8 +26,7 @@
 /// 实现协议中的类方法
 + (NSArray<NSString *>*)patternString
 {
-    return nil;
-    /// return @[];
+    return @[];
     /// return @[@"dfyy://router/demoBase"];
 }
 

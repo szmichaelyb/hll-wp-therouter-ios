@@ -36,19 +36,19 @@ public class TheRouterWebApi: NSObject, CustomRouterInfo {
     public override init() {}
 }
 
-@objc public class TheRouterBaseApi: NSObject, CustomRouterInfo {
-    
-    @objc public static var patternString = "dfyy://router/demoBase"
-    public static var routerClass = "MyBaseController"
-    public var params: [String: Any] { return [:] }
-    public var jumpType: LAJumpType = .push
-    
-    // 这里没办法，OC不支持元组，只能拆开
-    @objc public func generateParams() -> [String: Any] {
-        return TheRouter.generate(Self.patternString, params: self.params, jumpType: self.jumpType).1
-    }
-    public override init() {}
-}
+//@objc public class TheRouterBaseApi: NSObject, CustomRouterInfo {
+//    
+//    @objc public static var patternString = "dfyy://router/demoBase"
+//    public static var routerClass = "MyBaseController"
+//    public var params: [String: Any] { return [:] }
+//    public var jumpType: LAJumpType = .push
+//    
+//    // 这里没办法，OC不支持元组，只能拆开
+//    @objc public func generateParams() -> [String: Any] {
+//        return TheRouter.generate(Self.patternString, params: self.params, jumpType: self.jumpType).1
+//    }
+//    public override init() {}
+//}
 
 @objc public class TheRouterAApi: NSObject, CustomRouterInfo {
     

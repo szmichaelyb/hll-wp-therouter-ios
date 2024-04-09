@@ -34,15 +34,11 @@
         NSLog(@"---[%@]---> params = %@,\n---> classInstance = %@",NSStringFromSelector(_cmd),params,classInstance);
     }];
     // 下方为H5跳转Demo
-    //    [TheRouterService openWebURL:@"https://therouter.cn/" :@{}];
+    // [TheRouterService openWebURL:@"https://therouter.cn/" :@{}];
 }
 
 - (IBAction)pushWeb:(id)sender
 {
-    
-    /// [TheRouterService openURL:TheRouterApi.patternString :TheRouterApi.new.generateParams :^(NSDictionary *params, NSObject *classInstance) {
-    /// }];
-    
     /// 下方为H5跳转Demo
     [TheRouterService openWebURL:@"https://therouter.cn/" :@{}];
 }
@@ -56,21 +52,32 @@
         @"addRefresh":@(YES),
     }];
     NSLog(@"---> 传递参数 = %@", data);
-    [TheRouterService openURL:TheRouterAApi.patternString :data :^(NSDictionary *params, NSObject *classInstance) {
+    /// [TheRouterService openURL:TheRouterAApi.patternString :data :^(NSDictionary *params, NSObject *classInstance) {
+    ///     NSLog(@"---[%@]---> params = %@,\n---> classInstance = %@",NSStringFromSelector(_cmd),params,classInstance);
+    /// }];
+    
+    [TheRouterService openURL:@"dfyy://router/demoA" :data :^(NSDictionary *params, NSObject *classInstance) {
         NSLog(@"---[%@]---> params = %@,\n---> classInstance = %@",NSStringFromSelector(_cmd),params,classInstance);
     }];
 }
 
 - (IBAction)pushB:(id)sender
 {
-    [TheRouterService openURL:TheRouterBApi.patternString :TheRouterApi.new.generateParams :^(NSDictionary *params, NSObject *classInstance) {
+    /// [TheRouterService openURL:TheRouterBApi.patternString :TheRouterApi.new.generateParams :^(NSDictionary *params, NSObject *classInstance) {
+    ///     NSLog(@"---[%@]---> params = %@,\n---> classInstance = %@",NSStringFromSelector(_cmd),params,classInstance);
+    /// }];
+    ///
+    [TheRouterService openURL:@"dfyy://router/demoB" :TheRouterApi.new.generateParams :^(NSDictionary *params, NSObject *classInstance) {
         NSLog(@"---[%@]---> params = %@,\n---> classInstance = %@",NSStringFromSelector(_cmd),params,classInstance);
     }];
 }
 
 - (IBAction)pushC:(id)sender
 {
-    [TheRouterService openURL:TheRouterCApi.patternString :TheRouterApi.new.generateParams :^(NSDictionary *params, NSObject *classInstance) {
+    /// [TheRouterService openURL:TheRouterCApi.patternString :TheRouterApi.new.generateParams :^(NSDictionary *params, NSObject *classInstance) {
+    ///     NSLog(@"---[%@]---> params = %@,\n---> classInstance = %@",NSStringFromSelector(_cmd),params,classInstance);
+    /// }];
+    [TheRouterService openURL:@"dfyy://router/demoC" :TheRouterApi.new.generateParams :^(NSDictionary *params, NSObject *classInstance) {
         NSLog(@"---[%@]---> params = %@,\n---> classInstance = %@",NSStringFromSelector(_cmd),params,classInstance);
     }];
 }

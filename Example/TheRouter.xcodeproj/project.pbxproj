@@ -21,11 +21,11 @@
 		1C839BA62AA6F67A00726596 /* TheRouterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C839B992AA6F67A00726596 /* TheRouterController.swift */; };
 		1C839BA72AA6F67A00726596 /* AppConfigServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C839B9A2AA6F67A00726596 /* AppConfigServices.swift */; };
 		4394034DB0690EBF3D6B71BF /* Pods_TheRouter_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B79F8205362B05ED97B22883 /* Pods_TheRouter_Tests.framework */; };
-		4C63AA342BC51C0F00BA93E6 /* MyBController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C63AA2C2BC51C0F00BA93E6 /* MyBController.m */; };
-		4C63AA352BC51C0F00BA93E6 /* MyAController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C63AA2D2BC51C0F00BA93E6 /* MyAController.m */; };
-		4C63AA362BC51C0F00BA93E6 /* MyCController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C63AA302BC51C0F00BA93E6 /* MyCController.m */; };
-		4C63AA372BC51C0F00BA93E6 /* MyBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C63AA312BC51C0F00BA93E6 /* MyBaseController.m */; };
 		4C63AA392BC51EFD00BA93E6 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C63AA382BC51EFD00BA93E6 /* UIColor+Ext.swift */; };
+		4C63AA622BC532E000BA93E6 /* MyAController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C63AA5C2BC532E000BA93E6 /* MyAController.m */; };
+		4C63AA632BC532E000BA93E6 /* MyBController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C63AA5D2BC532E000BA93E6 /* MyBController.m */; };
+		4C63AA642BC532E000BA93E6 /* MyBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C63AA5E2BC532E000BA93E6 /* MyBaseController.m */; };
+		4C63AA652BC532E000BA93E6 /* MyCController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C63AA5F2BC532E000BA93E6 /* MyCController.m */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
@@ -63,15 +63,15 @@
 		1C839B992AA6F67A00726596 /* TheRouterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheRouterController.swift; sourceTree = "<group>"; };
 		1C839B9A2AA6F67A00726596 /* AppConfigServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfigServices.swift; sourceTree = "<group>"; };
 		3C4F81FF1E1F872F282998C8 /* Pods-TheRouter_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheRouter_Tests.debug.xcconfig"; path = "Target Support Files/Pods-TheRouter_Tests/Pods-TheRouter_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		4C63AA2C2BC51C0F00BA93E6 /* MyBController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyBController.m; path = "../../TheRouter-ObjectiveCDemo/TheRouter-ObjectiveCDemo/MyBController.m"; sourceTree = "<group>"; };
-		4C63AA2D2BC51C0F00BA93E6 /* MyAController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyAController.m; path = "../../TheRouter-ObjectiveCDemo/TheRouter-ObjectiveCDemo/MyAController.m"; sourceTree = "<group>"; };
-		4C63AA2E2BC51C0F00BA93E6 /* MyCController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyCController.h; path = "../../TheRouter-ObjectiveCDemo/TheRouter-ObjectiveCDemo/MyCController.h"; sourceTree = "<group>"; };
-		4C63AA2F2BC51C0F00BA93E6 /* MyBController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyBController.h; path = "../../TheRouter-ObjectiveCDemo/TheRouter-ObjectiveCDemo/MyBController.h"; sourceTree = "<group>"; };
-		4C63AA302BC51C0F00BA93E6 /* MyCController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyCController.m; path = "../../TheRouter-ObjectiveCDemo/TheRouter-ObjectiveCDemo/MyCController.m"; sourceTree = "<group>"; };
-		4C63AA312BC51C0F00BA93E6 /* MyBaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyBaseController.m; path = "../../TheRouter-ObjectiveCDemo/TheRouter-ObjectiveCDemo/MyBaseController.m"; sourceTree = "<group>"; };
-		4C63AA322BC51C0F00BA93E6 /* MyAController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyAController.h; path = "../../TheRouter-ObjectiveCDemo/TheRouter-ObjectiveCDemo/MyAController.h"; sourceTree = "<group>"; };
-		4C63AA332BC51C0F00BA93E6 /* MyBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyBaseController.h; path = "../../TheRouter-ObjectiveCDemo/TheRouter-ObjectiveCDemo/MyBaseController.h"; sourceTree = "<group>"; };
 		4C63AA382BC51EFD00BA93E6 /* UIColor+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Ext.swift"; path = "../../TheRouter-ObjectiveCDemo/TheRouter-ObjectiveCDemo/UIColor+Ext.swift"; sourceTree = "<group>"; };
+		4C63AA5A2BC532E000BA93E6 /* MyBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyBaseController.h; sourceTree = "<group>"; };
+		4C63AA5B2BC532E000BA93E6 /* MyCController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCController.h; sourceTree = "<group>"; };
+		4C63AA5C2BC532E000BA93E6 /* MyAController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAController.m; sourceTree = "<group>"; };
+		4C63AA5D2BC532E000BA93E6 /* MyBController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyBController.m; sourceTree = "<group>"; };
+		4C63AA5E2BC532E000BA93E6 /* MyBaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyBaseController.m; sourceTree = "<group>"; };
+		4C63AA5F2BC532E000BA93E6 /* MyCController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCController.m; sourceTree = "<group>"; };
+		4C63AA602BC532E000BA93E6 /* MyAController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAController.h; sourceTree = "<group>"; };
+		4C63AA612BC532E000BA93E6 /* MyBController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyBController.h; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* TheRouter_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheRouter_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -142,7 +142,6 @@
 		607FACD21AFB9204008FA782 /* Example for TheRouter */ = {
 			isa = PBXGroup;
 			children = (
-				4C63AA382BC51EFD00BA93E6 /* UIColor+Ext.swift */,
 				F0750B152B5EA72A003FD724 /* AnyPrifxClassTestController.swift */,
 				1C839B9A2AA6F67A00726596 /* AppConfigServices.swift */,
 				1C839B942AA6F67A00726596 /* AppDelegate.swift */,
@@ -150,14 +149,14 @@
 				F0750B132B5EA112003FD724 /* LARouterController.swift */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				1C839B932AA6F67A00726596 /* Main.storyboard */,
-				4C63AA322BC51C0F00BA93E6 /* MyAController.h */,
-				4C63AA2D2BC51C0F00BA93E6 /* MyAController.m */,
-				4C63AA332BC51C0F00BA93E6 /* MyBaseController.h */,
-				4C63AA312BC51C0F00BA93E6 /* MyBaseController.m */,
-				4C63AA2F2BC51C0F00BA93E6 /* MyBController.h */,
-				4C63AA2C2BC51C0F00BA93E6 /* MyBController.m */,
-				4C63AA2E2BC51C0F00BA93E6 /* MyCController.h */,
-				4C63AA302BC51C0F00BA93E6 /* MyCController.m */,
+				4C63AA602BC532E000BA93E6 /* MyAController.h */,
+				4C63AA5C2BC532E000BA93E6 /* MyAController.m */,
+				4C63AA5A2BC532E000BA93E6 /* MyBaseController.h */,
+				4C63AA5E2BC532E000BA93E6 /* MyBaseController.m */,
+				4C63AA612BC532E000BA93E6 /* MyBController.h */,
+				4C63AA5D2BC532E000BA93E6 /* MyBController.m */,
+				4C63AA5B2BC532E000BA93E6 /* MyCController.h */,
+				4C63AA5F2BC532E000BA93E6 /* MyCController.m */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 				1C839B8C2AA6F67900726596 /* TheRouter_Example-Bridging-Header.h */,
 				1C839B8F2AA6F67A00726596 /* TheRouterApi.swift */,
@@ -170,6 +169,7 @@
 				1C41F0142B0DD792002E2F24 /* TheRouterControllerE.swift */,
 				1C839B8D2AA6F67A00726596 /* TheRouterModel.swift */,
 				1C839B902AA6F67A00726596 /* TheRouterWebController.swift */,
+				4C63AA382BC51EFD00BA93E6 /* UIColor+Ext.swift */,
 				1C839B912AA6F67A00726596 /* ViewController.swift */,
 			);
 			name = "Example for TheRouter";
@@ -398,19 +398,19 @@
 				1C839BA62AA6F67A00726596 /* TheRouterController.swift in Sources */,
 				1C839B9C2AA6F67A00726596 /* TheRouterControllerC.swift in Sources */,
 				4C63AA392BC51EFD00BA93E6 /* UIColor+Ext.swift in Sources */,
+				4C63AA622BC532E000BA93E6 /* MyAController.m in Sources */,
 				1C839BA02AA6F67A00726596 /* TheRouterControllerA.swift in Sources */,
-				4C63AA352BC51C0F00BA93E6 /* MyAController.m in Sources */,
 				F0750B162B5EA72A003FD724 /* AnyPrifxClassTestController.swift in Sources */,
+				4C63AA642BC532E000BA93E6 /* MyBaseController.m in Sources */,
 				1C839BA72AA6F67A00726596 /* AppConfigServices.swift in Sources */,
-				4C63AA372BC51C0F00BA93E6 /* MyBaseController.m in Sources */,
+				4C63AA652BC532E000BA93E6 /* MyCController.m in Sources */,
 				1C839B9B2AA6F67A00726596 /* TheRouterModel.swift in Sources */,
 				F0750B142B5EA112003FD724 /* LARouterController.swift in Sources */,
 				1C839BA22AA6F67A00726596 /* AppDelegate.swift in Sources */,
 				1C41F0152B0DD793002E2F24 /* TheRouterControllerE.swift in Sources */,
+				4C63AA632BC532E000BA93E6 /* MyBController.m in Sources */,
 				1C839BA42AA6F67A00726596 /* TheRouterBController.m in Sources */,
 				1C839B9D2AA6F67A00726596 /* TheRouterApi.swift in Sources */,
-				4C63AA342BC51C0F00BA93E6 /* MyBController.m in Sources */,
-				4C63AA362BC51C0F00BA93E6 /* MyCController.m in Sources */,
 				1C839B9E2AA6F67A00726596 /* TheRouterWebController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
