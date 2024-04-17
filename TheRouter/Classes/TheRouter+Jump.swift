@@ -215,7 +215,11 @@ extension TheRouter {
                 if  currentVC.isKind(of: UINavigationController.self) == true {
                     navVC = currentVC as? UINavigationController
                 } else {
-                    navVC = getFirstNavigationControllerContainer(responder: currentVC) as? UINavigationController
+                    if currentVC.isKind(of: NSClassFromString("DFTabBarController2")!) == true {
+                        navVC = currentVC.perform(Selector(String("selectedViewController")))?.takeUnretainedValue() as? UINavigationController
+                    } else {
+                        navVC = getFirstNavigationControllerContainer(responder: currentVC) as? UINavigationController
+                    }
                 }
                 vc.hidesBottomBarWhenPushed = true
                 navVC?.pushViewController(vc, animated: true)
