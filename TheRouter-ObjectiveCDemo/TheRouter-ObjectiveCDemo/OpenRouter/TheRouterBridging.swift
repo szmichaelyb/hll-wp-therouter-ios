@@ -17,6 +17,7 @@ public let webRouterUrl = "scheme://webview/home"
 @objc public class TheRouterService: NSObject {
     
     public typealias TheRouterComplateHandler = ((NSDictionary?, NSObject?) -> Void)?
+    public typealias DFRouterOpenUrlHandler = ((String?,[String: Any]?,TheRouterComplateHandler)->Void)?
 
     @objc public static func initTheRouter() {
         // 日志回调，可以监控线上路由运行情况
@@ -44,6 +45,12 @@ public let webRouterUrl = "scheme://webview/home"
             
         // 动态注册服务
         TheRouterManager.registerServices(excludeCocoapods: true)
+    }
+    
+    @objc static let openUrl:DFRouterOpenUrlHandler = {url,params,completeHandler in
+        TheRouter.openURL(url ?? "", userInfo: params ?? [String: Any](), complateHandler: { (dict, obj) in
+            completeHandler?(dict as NSDictionary?, obj as? NSObject) /// 将结果转换为OC兼容类型
+        })
     }
     
     @discardableResult

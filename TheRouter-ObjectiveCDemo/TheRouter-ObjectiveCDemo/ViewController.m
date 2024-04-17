@@ -47,18 +47,25 @@
 {
     NSMutableDictionary *data = TheRouterApi.new.generateParams.mutableCopy;
     [data addEntriesFromDictionary:@{
-        @"dfzq":@"michael",
         @"hideTopBar":@(1),
         @"addRefresh":@(YES),
+        /// @"jumpType":@"modal",
+        /// @"jumpType":@"0",
+        /// @"jumpType":@0
     }];
     NSLog(@"---> 传递参数 = %@", data);
     /// [TheRouterService openURL:TheRouterAApi.patternString :data :^(NSDictionary *params, NSObject *classInstance) {
     ///     NSLog(@"---[%@]---> params = %@,\n---> classInstance = %@",NSStringFromSelector(_cmd),params,classInstance);
     /// }];
+    ///
     
-    [TheRouterService openURL:@"dfyy://router/demoA" :data :^(NSDictionary *params, NSObject *classInstance) {
-        NSLog(@"---[%@]---> params = %@,\n---> classInstance = %@",NSStringFromSelector(_cmd),params,classInstance);
-    }];
+    TheRouterService.openUrl(@"dfyy://router/demoA", data, ^(NSDictionary *dict, NSObject *obj){
+        NSLog(@"---[%@]---> params = %@,\n---> classInstance = %@",NSStringFromSelector(_cmd),dict,obj);
+    });
+    
+//    [TheRouterService openURL:@"dfyy://router/demoA" :data :^(NSDictionary *params, NSObject *classInstance) {
+//        NSLog(@"---[%@]---> params = %@,\n---> classInstance = %@",NSStringFromSelector(_cmd),params,classInstance);
+//    }];
 }
 
 - (IBAction)pushB:(id)sender

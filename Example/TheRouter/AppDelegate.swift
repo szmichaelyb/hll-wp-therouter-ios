@@ -34,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         TheRouterManager.loadRouterClass(excludeCocoapods: true, useCache: false)
         
         TheRouter.lazyRegisterRouterHandle { url, userInfo in
-            TheRouterManager.injectRouterServiceConfig(webRouterUrl, serivceHost)
+            /// TheRouterManager.injectRouterServiceConfig(webRouterUrl, serivceHost)
             /// - Parameters:
             ///   - excludeCocoapods: 排除一些非业务注册类，这里一般会将 "com.apple", "org.cocoapods" 进行过滤，但是如果组件化形式的，创建的BundleIdentifier也是
             ///   org.cocoapods，这里需要手动改下，否则组件内的类将不会被获取。
